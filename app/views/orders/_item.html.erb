@@ -1,0 +1,19 @@
+<% @prod = Product.where(id: prod_id) %>
+<tr>
+  <td>
+    <img src="/uploads/product/image/<%= prod_id%>/tiny_<%= @prod[0][:image]%>">
+  </td>
+  <td>
+  <%= @prod[0][:name] %>
+  </td>
+  <td>
+  <p><%= @prod[0][:description] %></p>
+  </td>
+  <td>
+  <%= "Quantity: #{quantity}," %>
+  </td>
+  <td>
+  <%= "Total: #{humanized_money_with_symbol total_price}" %>
+  <br/><br/>
+  </td>
+</tr>
