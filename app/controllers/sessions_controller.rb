@@ -9,7 +9,9 @@ class SessionsController < ApplicationController
     # raise @test.inspect
     user = User.find_by_email(params[:email])
 
-    if user && user.authenticate(params[:password])
+    if user = User.authenticate_with_credentials(params[:email], params[:password])
+      
+    # if user && user.authenticate(params[:password])
       # raise @user[:email].inspect
       session[:user_id] = user.id
       redirect_to '/'

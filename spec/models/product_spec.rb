@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
-  
+
+  describe 'Validations' do
+
   it 'product is valid with all fields filled in' do
     @category = Category.new(name: "Electronics")
     @product = Product.new(name: "useless thing", quantity: 20, price: 200000, category: @category)   
@@ -38,5 +40,5 @@ RSpec.describe Product, type: :model do
     # byebug 
     expect(@product.errors.messages[:category].first).to eq "can't be blank"
    end
-   
+  end
 end
