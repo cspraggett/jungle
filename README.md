@@ -1,6 +1,8 @@
 # Jungle
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+The app was in a semi-complete state. I had to implement changes such as making sure that currency was formatted properly,
+add user authentication and implement more advanced administarion tools.
 
 
 ## Setup
